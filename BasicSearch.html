@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- set page title as Search a Movie -->
+    <title>Search a Movie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- include JS_search.js file here -->
+    <script src="JS_BasicSearch.js"></script>
+     </head>
+  <body>
+    <!-- Create a title as "Movies List" -->
+    <h1>Movies List</h1>
+
+    <!-- Create a form with a text input with placeholder "Enter the movie name", id as "searchKey" and call method searchMovie on user type -->
+    <form>
+      <input
+        type="text"
+        id="searchKey"
+        placeholder="Enter the movie name"
+        onkeyup="searchMovie()"
+      />
+    </form>
+
+    <br />
+    <!--
+        Create 3 radio buttons with values linear, binary and ternary.
+        set id as "searchAlgorithm" for all 3 radio buttons and call method searchMovie on user click
+        select first radio button by default
+        after the label "Search Algorithm:"
+    -->
+    <label for="searchAlgorithm">Search Algorithm:</label>
+    <input
+      type="radio"
+      id="searchAlgorithm"
+      name="searchAlgorithm"
+      value="linear"
+      onclick="searchMovie()"
+      checked
+    />
+    Linear
+    <input
+      type="radio"
+      id="searchAlgorithm"
+      name="searchAlgorithm"
+      value="binary"
+      onclick="searchMovie()"
+    />
+    Binary
+    <input
+      type="radio"
+      id="searchAlgorithm"
+      name="searchAlgorithm"
+      value="ternary"
+      onclick="searchMovie()"
+    />
+    Ternary
+
+    <br /><br />
+    <!-- Create a div with id as "movies_list" -->
+    <div id="movies_list"></div>
+  </body>
+</html>
